@@ -1,0 +1,84 @@
+<mat-card>
+
+    <mat-card-header>
+        <div mat-card-avatar class="header-image"></div>
+        <div class="mat-card-container">
+            <mat-card-title>Dependency Injection Quiz</mat-card-title>
+            <mat-card-subtitle>
+                <h2>Results</h2>
+            </mat-card-subtitle>
+        </div>
+    </mat-card-header>
+
+
+    <mat-card-content>
+
+        <section class="results">
+            <section class="statistics">
+                <h3>Statistics</h3>
+                <span>You scored {{ correctAnswersCount }} out of {{ totalQuestions }} questions correctly.</span>
+
+            </section>
+        </section>
+
+        <!-- <section class="quizSummary">
+            <details>
+                <summary>View a more detailed summary of your quiz</summary>
+                <accordion>
+                    <accordion-group #quizQuestion role="tab" *ngFor="let question of allQuestions">
+                        <span accordion-heading class="accordion-heading">
+                            <span>
+                                <strong>Question #{{ question.questionId }}: </strong> <em>{{ question.questionText
+                                    }}</em>
+                            </span>
+                        <span class="badge badge-secondary float-right pull-right">
+                                <i class="fa"
+                                    [ngClass]="{'fa-chevron-up': quizQuestion.isOpen, 'fa-chevron-down': !quizQuestion.isOpen}"></i>
+                            </span>
+                        </span>
+
+                        <div class="quiz-summary-question">
+                            <div class="quiz-summary-field">
+                                <span>
+                                    <span class="leader">Question #{{ question.questionId }}: </span>{{ question.questionText }}
+                                </span>
+                            </div>
+                            <div class="quiz-summary-field">
+                                <span>
+                                    <span class="leader">Your Answer: </span> Option {{ question.selectedOption }} &mdash; {{ question.options[question.selectedOption - 1].optionText }}
+                                <mat-icon class="correct" *ngIf="question.answer === question.selectedOption">done
+                                </mat-icon>
+                                <mat-icon class="incorrect" *ngIf="question.answer !== question.selectedOption">
+                                    clear</mat-icon>
+                                <span *ngIf="question.selectedOption === ''"> (no answer provided)</span>
+                                </span>
+                            </div>
+                            <div class="quiz-summary-field">
+                                <span>
+                                    <span class="leader">Correct Answer: </span> Option {{ question.answer }} &mdash; {{ question.options[question.answer - 1].optionText }}
+                                </span>
+                            </div>
+                            <div class="quiz-summary-field">
+                                <span>
+                                    <span class="leader">Explanation: </span> Option {{ question.answer }} was correct because {{ question.explanation }}.
+                                </span>
+                            </div>
+                        </div>
+                    </accordion-group>
+                </accordion>
+            </details>
+        </section> -->
+
+
+        <section class="return">
+            <mat-card-actions>
+                <a routerLink="/intro" class="btn">Restart Quiz</a>
+                <a href="https://www.codelab.fun" class="btn">Back to Codelab</a>
+            </mat-card-actions>
+        </section>
+
+
+
+    </mat-card-content>
+
+</mat-card>
